@@ -59,7 +59,6 @@
             </ComboBox>
             <TextBlock Grid.Row="1" Text="{x:Static p:Resources.text_nb_photos}"/>
             <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Numbers}" SelectedItem="{Binding SelectedNumber }" DisplayMemberPath="Number" >
-                
             </ComboBox>
             <Button Grid.Row="2" Grid.Column="1" Content="{x:Static p:Resources.Button_fetch}" Command="{Binding FetchButton}" Width="150"/>
             <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="20">
@@ -70,7 +69,7 @@
                 <ListView Grid.Row="0" ItemsSource="{Binding DogImages}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <UniformGrid Columns="{Binding SelectedNumber}"/>
+                            <UniformGrid Columns="10"/>
                             
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
@@ -78,7 +77,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                                <Image Source="{Binding }"  HorizontalAlignment="Stretch"  Stretch="UniformToFill"/>
+                                <Image Source="{Binding }" MaxHeight="600"  HorizontalAlignment="Stretch"  Stretch="Uniform"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
